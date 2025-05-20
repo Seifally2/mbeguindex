@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbegu Nzuri | Blog Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        secondary: '#8BC34A',
+                        dark: '#2E7D32',
+                        light: '#C8E6C9',
+                        accent: '#FFC107',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2E7D32;
+        }
+        
+        .article-content ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content img {
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tag {
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation -->
+<nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <!-- Logo Image -->
+                    <div class="p-1 mr-3 rounded-lg">
+                        <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="MbegunzuriBioTech Logo" class="h-10 w-auto">
+                    </div>
+
+                </a>
+            </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="About Us.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="Services.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="Blog.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="Contact Us.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="Services.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="Blog" class="bg-green-50 text-green-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="Contact Us.html" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium mt-2 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-light">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="#" class="hover:text-primary transition">Home</a>
+                <span class="mx-2">/</span>
+                <a href="#" class="hover:text-primary transition">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-primary">Sustainable Farming Techniques</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Header -->
+    <header class="hero-pattern bg-primary text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="flex justify-center space-x-2 mb-4">
+                    <span class="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                    <span class="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Unlocking the Potential of Tissue Culture.</h1>
+                <div class="flex items-center justify-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        
+                    </div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Article Content -->
+            <article class="lg:w-2/3">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden article-content">
+                    <img src="https://images.unsplash.com/photo-1625324455604-d75faf4b119b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG90YXRvJTIwZmFybXxlbnwwfHwwfHx8MA%3D%3D" alt="Sustainable Farming" class="w-full h-96 object-cover">
+                    
+                    <div class="p-8">
+                        <p class="text-gray-700 mb-6">For any newbie in tissue culture, the Biocoupler Glass set is an absolute must-have. Its importance cannot be overstated, particularly when it comes to liquid media storage and usage in storing potato eyes. Let's dive into why this equipment is essential and how it has transformed my tissue culture endeavors.
+
+Liquid media is the lifeblood of tissue culture, providing the essential nutrients and environment for plant propagation. However, handling and storing liquid media can be challenging without the right tools. This is where the Biocoupler Glass set shines. Its design allows for seamless storage and dispensing of liquid media, ensuring consistency and minimizing contamination risks.
+
+But the versatility of the Biocoupler Glass set doesn't end there. One of its standout features is its ability to store potato eyes efficiently. These tiny yet crucial plant tissues are the starting point for many tissue culture experiments, and proper storage is essential for their viability. With the Biocoupler Glass set, I've been able to store and initiate potato eyes with ease, setting the stage for successful tissue culture propagation.
+
+My journey with the Biocoupler Glass set began with the initial steps of harvesting potato eyes using liquid media. With just five culture bottles, I was able to initiate a remarkable 12 potato eyes, highlighting the efficiency and effectiveness of this tool. Its user-friendly design and clear instructions made the process straightforward, even for a novice like myself.
+
+Beyond its practical utility, the Biocoupler Glass set has sparked my curiosity and passion for tissue culture. Experimentation and research have never been more accessible, thanks to this innovative tool. Whether I'm propagating plantlets or exploring new cloning techniques, the Biocoupler Glass set empowers me to push the boundaries of what's possible in tissue culture.
+
+In co my first experience with the Biocoupler Glass set has been nothing short of transformative. It has not only simplified the intricacies of tissue culture but has also ignited a newfound enthusiasm for exploration and discovery. Whether you're a seasoned researcher or embarking on your first tissue culture journey, the Biocoupler Glass set is a game-changer that belongs in every lab.</p>
+                        
+                        <img src="https://plus.unsplash.com/premium_photo-1669122598991-18d700de7532?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG90YXRvJTIwZmFybXxlbnwwfHwwfHx8MA%3D%3D" alt="Conservation Agriculture" class="w-full h-64 object-cover">
+                        
+
+                        <img src="https://images.unsplash.com/photo-1722060369847-8fd32ad5fb79?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBvdGF0byUyMGZhcm18ZW58MHx8MHx8fDA%3D" alt="Water Harvesting" class="w-full h-64 object-cover">
+                        <img src="https://plus.unsplash.com/premium_photo-1675365779531-031dfdcdf947?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG90YXRvJTIwZmFybXxlbnwwfHwwfHx8MA%3D%3D" alt="Water Harvesting" class="w-full h-64 object-cover">
+
+                        <div class="bg-light p-6 rounded-lg mt-8">
+                            <h3 class="text-xl font-bold text-dark mb-3">Conclusion</h3>
+                            <p>Conclusion: In the vast fields of Tanzania, the choice to cultivate potatoes goes beyond mere agricultural decisions. It's a strategic move towards economic resilience, nutritional well-being, and community empowerment. As the spud takes center stage in Tanzania's agricultural narrative, it not only roots itself in the soil but also in the collective prosperity of the nation.</p>
+                        </div>
+                    </div>
+            </article>
+            
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3">
+                <!-- About Widget -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">About Mbegu Nzuri</h3>
+                        <p class="text-gray-700 mb-4">Mbegu Nzuri Biotech Farms Ltd. was established to address the challenges faced by farmers in accessing quality seeds and seedlings. Leveraging biotechnology, we specialize in producing certified seeds and seedlings that meet international quality standards.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-primary text-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Subscribe to our Newsletter</h3>
+                        <p class="text-light mb-4">Get the latest farming tips and updates directly to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg text-gray-800 mb-3 focus:outline-none">
+                            <button type="submit" class="w-full bg-accent hover:bg-yellow-500 text-gray-900 font-medium py-3 px-6 rounded-lg transition">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Related Posts -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">You Might Also Like</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <a href="Why You Should Choose Potato Production.html">
+                        <img src="https://images.unsplash.com/photo-1625324455604-d75faf4b119b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG90YXRvJTIwZmFybXxlbnwwfHwwfHx8MA%3D%3D" alt="Post" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-3">
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-xs font-medium"></span>
+                        </div>
+                        <a href="Why You Should Choose Potato Production.html" class="text-xl font-bold mb-2 hover:text-primary transition">Why You Should Choose Potato Production</a>
+                        <p class="text-gray-600 mb-4">Introduction: In the heartland of East Africa, where the sun-kissed plains meet the fertile soil, lies Tanzania—a land teeming with promise for agricultural endeavors.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span></span>
+                            <span class="mx-2"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <a href="Revolutionizing Potato Production.html">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1800,h=1080,fit=crop/AQE4VMVlGyc2oZvJ/whatsapp-image-2024-04-15-at-14.56.36-A1aKjD54V7uEPMKo.jpeg" alt="Post" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-3">
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-xs font-medium"></span>
+                        </div>
+                        <a href="Revolutionizing Potato Production.html" class="text-xl font-bold mb-2 hover:text-primary transition">Revolutionizing Potato Production.</a>
+                        <p class="text-gray-600 mb-4">
+
+It has been so long, and yet the journey feels like it's just begun. From the moment I unboxed my PCT Starter Kit and carefully assembled the Biocoupler Glass set, </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span></span>
+                            <span class="mx-2"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- Logo and Title -->
+                <div class="flex items-center mb-4">
+                    <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="Mbegu Nzuri Logo" class="h-10 w-auto mr-2 rounded">
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Innovating agriculture through biotechnology for a sustainable future.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#activities" class="text-gray-400 hover:text-white">Activities</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#technologies" class="text-gray-400 hover:text-white">Technologies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Crop Enhancement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Bio-Fertilizers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Bio-Pesticides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Soil Analysis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Farmer Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="text-white-400 not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>AVRDC - The World Vegetable Center, Eastern and Southern Africa, Arusha - Himo Rd, Sing'isi</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-500"></i> +255 656 277 234</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-green-500"></i> info@mbegunzuribiotechfarms.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Mbegunzuri BioTech Farms. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple script for mobile menu toggle (can be expanded)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            const mobileMenu = document.querySelector('.md\\:flex.space-x-8');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-16');
+                mobileMenu.classList.toggle('right-4');
+                mobileMenu.classList.toggle('bg-white');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('shadow-lg');
+                mobileMenu.classList.toggle('rounded-lg');
+                mobileMenu.classList.toggle('space-y-4');
+                mobileMenu.classList.toggle('space-x-0');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

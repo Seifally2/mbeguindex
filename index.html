@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mbegu nzuri BioTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16a34a',
+                        secondary: '#22c55e',
+                        accent: '#86efac',
+                        dark: '#14532d',
+                        light: '#bbf7d0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                        url('https://mbegunzuribiotechfarms.com/wp-content/uploads/2025/01/tissue-culture.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 90vh;
+        }
+        
+        .gradient-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .stats-item {
+            position: relative;
+        }
+        
+        .stats-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .stats-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+   <!-- Navigation -->
+<nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <!-- Logo Image -->
+                    <div class="p-1 mr-3 rounded-lg">
+                        <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="MbegunzuriBioTech Logo" class="h-10 w-auto">
+                    </div>
+
+                </a>
+            </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="About Us.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="Services.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="Blog.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="Contact Us.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="Services.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="Blog" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="Contact Us.html" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium mt-2 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center text-white pt-20">
+        <div class="max-w-5xl px-6">
+            <div class="inline-block bg-primary/20 backdrop-blur-sm border border-primary/30 px-4 py-2 rounded-full mb-6">
+                <span class="text-sm font-medium text-white">Innovating Agriculture Since 2023</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Innovating agriculture through advanced <span class="text-primary">Biotechnology</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Harnessing cutting-edge science to develop eco-friendly, high-yield agricultural solutions for tomorrow's world.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-primary hover:bg-dark text-white font-bold py-3.5 px-8 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fas fa-flask"></i> Our Solutions
+                </a>
+                <a href="#contact" class="bg-white/20 hover:bg-white/30 border-2 border-white text-white font-bold py-3.5 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stats-item text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">1k</div>
+                    <div class="text-gray-300 uppercase text-sm font-medium">SMALL HOLDERS FARMERS</div>
+                </div>
+                <div class="stats-item text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">96%</div>
+                    <div class="text-gray-300 uppercase text-sm font-medium">Satisfaction rate</div>
+                </div>
+                <div class="stats-item text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">5+</div>
+                    <div class="text-gray-300 uppercase text-sm font-medium">Years of experience</div>
+                </div>
+                <div class="stats-item text-center">
+                    <div class="text-4xl font-bold text-primary mb-2"></div>
+                    <div class="text-gray-300 uppercase text-sm font-medium"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="py-20 bg-gray-50" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Mbegu Nzuri Biotech Farm</h2>
+                <div class="mt-4 max-w-3xl mx-auto">
+                    <p class="text-xl text-gray-600">Mbegu Nzuri Biotech Farms Ltd. was founded to tackle the challenges farmers face in accessing high-quality seeds and seedlings. Using advanced biotechnology, we focus on producing certified seeds and seedlings that adhere to international quality standards.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">To empower farmers by providing superior, science-backed agricultural solutions.</p>
+
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">Our Vision</h3>
+                    <p class="text-gray-600 mb-6">To transform agriculture through innovative seed technologies for sustainable food production.</p>
+
+                 <h3 class="text-2xl font-bold text-green-800 mb-6">Core Values</h3>
+                    <p class="text-gray-600 mb-6">Quality, Innovation, Sustainability, and Farmer-Centricity.</p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[200px]">
+                            <div class="text-green-600 text-4xl mb-4">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">150+ Researchers</h4>
+                            <p class="text-gray-600">Dedicated to innovation</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[200px]">
+                            <div class="text-green-600 text-4xl mb-4">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">15 Countries</h4>
+                            <p class="text-gray-600">Global presence</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2024/12/koku-7.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 gradient-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">OUR SOLUTIONS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Cutting-Edge Techniques</h2>
+                <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+                    We develop innovative biotechnologies that address the most pressing challenges in agriculture today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card rounded-xl overflow-hidden shadow-md transition-all p-8 border border-gray-100">
+                    <div class="bg-primary/10 text-primary w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-dna text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Tissue Culture Technology</h3>
+                    <p class="text-gray-600 mb-4">
+                         A revolutionary method that enables the production of pathogen-free, genetically uniform planting materials. This ensures high-quality, reliable seedlings for optimal farm productivity.
+                    </p>
+                    <a href="#" class="text-primary font-medium inline-flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card rounded-xl overflow-hidden shadow-md transition-all p-8 border border-gray-100">
+                    <div class="bg-primary/10 text-primary w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-virus text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Apical Cuttings</h3>
+                    <p class="text-gray-600 mb-4">
+                        A modern propagation technique used to produce consistent and high-yielding potato plants. This method reduces the cost of seed production while maintaining top-tier quality.
+                    </p>
+                    <a href="#" class="text-primary font-medium inline-flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card rounded-xl overflow-hidden shadow-md transition-all p-8 border border-gray-100">
+                    <div class="bg-primary/10 text-primary w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Biotech Innovation</h3>
+                    <p class="text-gray-600 mb-4">
+                         We use controlled environments and precision agriculture to ensure every seedling meets strict quality standards.
+                    </p>
+                    <a href="#" class="text-primary font-medium inline-flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card rounded-xl overflow-hidden shadow-md transition-all p-8 border border-gray-100">
+                    <div class="bg-primary/10 text-primary w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-flask text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Soil Health Analysis</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive soil microbiome assessment to optimize plant growth and productivity.
+                    </p>
+                    <a href="#" class="text-primary font-medium inline-flex items-center gap-2">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+            
+            <div class="text-center mt-16">
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-dark hover:bg-primary text-white font-bold py-3.5 px-8 rounded-lg transition duration-300">
+                    View All Solutions <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2025/01/tissue-culture.jpg">
+                        <div class="absolute -bottom-6 -right-6 bg-primary p-6 rounded-xl shadow-lg">
+                            <div class="text-white text-3xl font-bold">15+</div>
+                            <div class="text-white text-sm">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">ABOUT US</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">Providing High-Quality, Certified Seeds & Seedlings for Sustainable Farming</h2>
+                    <p class="text-gray-600 mb-6">
+                        Mbegu Nzuri Biotech Farms Ltd. was founded to tackle the challenges farmers face in accessing high-quality seeds and seedlings. Using advanced biotechnology, we focus on producing certified seeds and seedlings that adhere to international quality standards. Our commitment to innovation and sustainability ensures farmers receive top-notch, reliable products to boost their agricultural productivity.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 text-primary p-3 rounded-lg">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Cutting-Edge Research</h4>
+                                <p class="text-gray-600 text-sm">State-of-the-art laboratories with the latest biotech equipment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 text-primary p-3 rounded-lg">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Global Impact</h4>
+                                <p class="text-gray-600 text-sm">Solutions deployed across 30+ countries worldwide</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 text-primary p-3 rounded-lg">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Sustainable Practices</h4>
+                                <p class="text-gray-600 text-sm">Eco-friendly technologies that protect biodiversity</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 text-primary p-3 rounded-lg">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Farmer-Centric</h4>
+                                <p class="text-gray-600 text-sm">Solutions designed with real-world farming needs in mind</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-dark text-white font-bold py-3.5 px-8 rounded-lg transition duration-300">
+                        Learn More About Us <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Technologies -->
+    <section class="py-20 bg-gray-50" id="technologies">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Services</h2>
+                <div class="mt-4 max-w-3xl mx-auto">
+                    <p class="text-xl text-gray-600">Innovative biotech solutions transforming modern agriculture.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden tech-card transition-all duration-300">
+                    <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2024/12/Untitled-design-9-1536x1024.jpg">
+                    <div class="p-6">
+                        <div class="text-green-600 text-2xl mb-3">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Seed & Seedling Supply</h3>
+                        <p class="text-gray-600 mb-4">We specialize in Seed & Seedling Supply across Tanzania, offering a wide range of premium products to ensure the success of your agricultural ventures.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden tech-card transition-all duration-300">
+                    <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2024/12/Untitled-design-11-1536x1024.jpg">
+                    <div class="p-6">
+                        <div class="text-green-600 text-2xl mb-3">
+                            <i class="fas fa-bacteria"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Customized Farming Solutions</h3>
+                        <p class="text-gray-600 mb-4">we provide Customized Farming Solutions designed to meet the unique needs of farmers across Tanzania</p>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden tech-card transition-all duration-300">
+                    <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2024/12/Untitled-design-17-1536x1024.jpg">
+                    <div class="p-6">
+                        <div class="text-green-600 text-2xl mb-3">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Technology Support</h3>
+                        <p class="text-gray-600 mb-4">Our Technology Support services are designed to provide farmers with the latest tools, software, and equipment needed to improve efficiency, boost productivity, and optimize farm management.</p>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-semibold">View All Technologies</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partners -->
+    <section class="py-20 bg-white" id="partners">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Partners</h2>
+                <div class="mt-4 max-w-3xl mx-auto">
+                    <p class="text-xl text-gray-600">Collaborating with global leaders in agriculture, research, and technology.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2024/12/Untitled-300-x-115-px.jpg" alt="Partner 1" class="partner-logo w-full h-auto">
+                <img src="https://via.placeholder.com/150x80?text=Partner+2" alt="Partner 2" class="partner-logo w-full h-auto">
+                <img src="https://via.placeholder.com/150x80?text=Partner+3" alt="Partner 3" class="partner-logo w-full h-auto">
+                <img src="https://via.placeholder.com/150x80?text=Partner+4" alt="Partner 4" class="partner-logo w-full h-auto">
+                <img src="https://via.placeholder.com/150x80?text=Partner+5" alt="Partner 5" class="partner-logo w-full h-auto">
+                <img src="https://via.placeholder.com/150x80?text=Partner+6" alt="Partner 6" class="partner-logo w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-dark text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Agricultural Practices?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact our team of experts to learn how our biotech solutions can benefit your operation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-primary hover:bg-secondary text-white font-bold py-3.5 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="tel:+15551234567" class="bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white font-bold py-3.5 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Call Us Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- Logo and Title -->
+                <div class="flex items-center mb-4">
+                    <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="Mbegu Nzuri Logo" class="h-10 w-auto mr-2 rounded">
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Innovating agriculture through biotechnology for a sustainable future.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mbegunzuribiotech?igsh=M3g4ZXV0NjY0aTE3" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                         <li><a href="Blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="Contact Us.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Tissue Culture Technology</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Precision Agriculture Consulting</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Educational Workshops and Training</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Customized Crop Development</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Environmental Impact Assessments</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="text-white-400 not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>AVRDC - The World Vegetable Center, Eastern and Southern Africa, Arusha - Himo Rd, Sing'isi</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-500"></i> +255 656 277 234</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-green-500"></i> info@mbegunzuribiotechfarms.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Mbegunzuri BioTech Farms. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        
+        // Mobile menu toggle functionality would go here
+        // This is a placeholder for actual implementation
+    </script>
+
+    <!-- Menu -->
+   <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate tech cards on scroll
+        const techCards = document.querySelectorAll('.tech-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        techCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

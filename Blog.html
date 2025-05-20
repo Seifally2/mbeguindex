@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Mbegu nzuri BioTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .category-pill:hover {
+            transform: scale(1.05);
+        }
+        .featured-post {
+            background-image: linear-gradient(to bottom right, rgba(74, 222, 128, 0.1), rgba(16, 185, 129, 0.2));
+        }
+        .read-more-btn:hover i {
+            transform: translateX(3px);
+        }
+        .author-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation -->
+<nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <!-- Logo Image -->
+                    <div class="p-1 mr-3 rounded-lg">
+                        <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="MbegunzuriBioTech Logo" class="h-10 w-auto">
+                    </div>
+
+                </a>
+            </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="About Us.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="Services.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="Blog.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="Contact Us.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="Services.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="Blog" class="bg-green-50 text-green-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="Contact Us.html" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium mt-2 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="relative py-20 bg-gradient-to-r from-green-50 to-emerald-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">GreenGen Biotech Insights</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover the latest research, innovations, and thought leadership in agricultural biotechnology from our team of experts.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <button class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+                    Subscribe to Newsletter
+                </button>
+                <button class="border border-green-600 text-green-600 hover:bg-green-50 font-medium py-2 px-6 rounded-full transition duration-300">
+                    Browse Categories
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Articles Section -->
+            <div class="lg:w-2/3">
+                <!-- Featured Post -->
+                <div class="featured-post rounded-xl p-8 mb-12 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500 opacity-5 z-0"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED</span>
+                            <span class="text-green-600 text-sm"></span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Unlocking the Potential of Tissue Culture.</h2>
+                        <p class="text-gray-600 text-lg mb-6">
+                            It has been so long, and yet the journey feels like it's just begun. From the moment I unboxed my PCT Starter Kit and carefully assembled the Biocoupler Glass set, I knew I was stepping into a world of endless possibilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"></span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"></span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"></span>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=624,fit=crop/AQE4VMVlGyc2oZvJ/dsc_9155-Y4L84MXRD9Tx5zjZ.jpg" alt="Dr. Sarah Chen" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="text-sm font-medium text-gray-800">Crescentia</p>
+                                <p class="text-xs text-gray-500">CEO & Founder</p>
+                            </div>
+                            <a href="Unlocking the Potential of Tissue Culture.html" class="ml-auto flex items-center text-green-600 font-medium read-more-btn">
+                                Read Article <i class="fas fa-arrow-right ml-2 transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Articles -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-8 border-b pb-2">Latest Articles</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Article 1 -->
+                    <article class="bg-white rounded-xl shadow-sm overflow-hidden article-card transition duration-300">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1800,h=1080,fit=crop/AQE4VMVlGyc2oZvJ/whatsapp-image-2024-01-25-at-12.57.51-AoPN1036PKCkOjRg.jpeg" alt="Biofertilizers" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="text-green-600 text-sm"></span>
+                                <span class="text-gray-400"></span>
+                                <span class="text-gray-500 text-sm"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Revolutionizing Potato Production.</h3>
+                            <p class="text-gray-600 mb-4">
+                               Greetings, fellow agricultural enthusiasts! I am Crescentia Mushobozi, a passionate biotech farmer specializing in tissue culture for banana and potatoes. Today, I am excited to share my transformative experience in potato production through the innovative use of Plant Preservative Mixture (PPM) from Plant Cell Technology.</p>
+
+                            <a href="Revolutionizing Potato Production.html" class="inline-flex items-center text-green-600 font-medium read-more-btn">
+                                Read more <i class="fas fa-arrow-right ml-2 transition duration-300"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="bg-white rounded-xl shadow-sm overflow-hidden article-card transition duration-300">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1800,h=1080,fit=crop/YD0jNn6BqBT4Zeyr/463a7589-AR07gX920jIDMLpn.JPG" alt="Precision Agriculture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="text-green-600 text-sm"></span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-500 text-sm"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Why You Should Choose Potato Production</h3>
+                            <p class="text-gray-600 mb-4">
+                                Delve into the rich soil of our journey as we uncover the compelling reasons behind our choice of potato production.
+                            </p>
+                            
+                            <a href="Why You Should Choose Potato Production.html" class="inline-flex items-center text-green-600 font-medium read-more-btn">
+                                Read more <i class="fas fa-arrow-right ml-2 transition duration-300"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 space-y-8">
+                <!-- Search -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Search Articles</h3>
+                    <div class="relative">
+                        <input type="text" placeholder="Search keywords..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent">
+                        <button class="absolute right-3 top-3 text-gray-400 hover:text-green-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="bg-green-600 text-white rounded-xl shadow-sm p-6">
+                    <h3 class="text-lg font-bold mb-3">Subscribe to Our Newsletter</h3>
+                    <p class="text-sm mb-4">Get the latest biotech research and agricultural innovations delivered to your inbox.</p>
+                    <form class="space-y-3">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <input type="email" placeholder="Email Address" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <button type="submit" class="w-full bg-white text-green-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition duration-300">
+                            Subscribe <i class="fas fa-envelope ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- Logo and Title -->
+                <div class="flex items-center mb-4">
+                    <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="Mbegu Nzuri Logo" class="h-10 w-auto mr-2 rounded">
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Innovating agriculture through biotechnology for a sustainable future.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mbegunzuribiotech?igsh=M3g4ZXV0NjY0aTE3" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                         <li><a href="Blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="Contact Us.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Tissue Culture Technology</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Precision Agriculture Consulting</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Educational Workshops and Training</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Customized Crop Development</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Environmental Impact Assessments</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="text-white-400 not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>AVRDC - The World Vegetable Center, Eastern and Southern Africa, Arusha - Himo Rd, Sing'isi</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-500"></i> +255 656 277 234</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-green-500"></i> info@mbegunzuribiotechfarms.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Mbegunzuri BioTech Farms. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Article card hover effects
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.boxShadow = '';
+            });
+        });
+
+        // Category pill hover effects
+        document.querySelectorAll('.category-pill').forEach(pill => {
+            pill.addEventListener('mouseenter', () => {
+                pill.style.transform = 'scale(1.05)';
+            });
+            
+            pill.addEventListener('mouseleave', () => {
+                pill.style.transform = '';
+            });
+        });
+
+        // Author card hover effects
+        document.querySelectorAll('.author-card').forEach(card => {
+            const img = card.querySelector('img');
+            
+            card.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                img.style.transform = '';
+            });
+        });
+
+        // Read more button arrow animation
+        document.querySelectorAll('.read-more-btn').forEach(btn => {
+            const icon = btn.querySelector('i');
+            
+            btn.addEventListener('mouseenter', () => {
+                icon.style.transform = 'translateX(3px)';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                icon.style.transform = '';
+            });
+        });
+    </script>
+    
+<!-- Menu -->
+
+   <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate tech cards on scroll
+        const techCards = document.querySelectorAll('.tech-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        techCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

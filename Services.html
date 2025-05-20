@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbegu nzuri BioTech  | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581093450023-eaf5c3617e32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .tab-button.active {
+            background-color: #16a34a;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover .tech-icon {
+            transform: scale(1.2);
+            color: #16a34a;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+   <!-- Navigation -->
+<nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <!-- Logo Image -->
+                    <div class="p-1 mr-3 rounded-lg">
+                        <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="MbegunzuriBioTech Logo" class="h-10 w-auto">
+                    </div>
+
+                </a>
+            </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium"">Home</a>
+                    <a href="About Us.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="Services.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="Blog.html" class="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="Contact Us.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="Services.html" class="text-green-600 border-b-2 border-green-500 px-3 py-2 text-sm font-medium">Services</a>
+                <a href="Blog" class="text-gray-900 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="Contact Us.html" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium mt-2 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero-bg text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
+
+        </div>
+    </div>
+
+    <!-- Services Tabs -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Biotech Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Comprehensive biotechnology solutions tailored to meet the challenges of modern agriculture.</p>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center mb-12 gap-2">
+                <button class="tab-button active px-6 py-3 rounded-full font-medium transition duration-300" data-tab="genetic-engineering">Tissue Culture Technology</button>
+                <button class="tab-button px-6 py-3 rounded-full font-medium transition duration-300" data-tab="microbial-solutions">Precision Agriculture Consulting</button>
+                <button class="tab-button px-6 py-3 rounded-full font-medium transition duration-300" data-tab="tissue-culture">Educational Workshops and Training</button>
+                <button class="tab-button px-6 py-3 rounded-full font-medium transition duration-300" data-tab="bioinformatics">Customized Crop Development</button>
+                <button class="tab-button px-6 py-3 rounded-full font-medium transition duration-300" data-tab="consulting">Environmental Impact Assessments</button>
+            </div>
+            
+            <!-- TISSUE cULTURE tECNOLOGY -->
+            <div class="tab-content active" id="tissue-culture-technology">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Tissue Culture technology</h3>
+                        <p class="text-lg text-gray-600 mb-6">We offer a pioneering service in tissue culture technology, employing cutting-edge biotechnology to provide farmers with personalized modified seeds. Through a meticulous analysis of local conditions, I ensures that the crops exhibit superior traits such as increased resistance to pests, enhanced nutritional content, and improved tolerance to environmental stresses. The service includes ongoing support, guiding farmers through planting, cultivation, and harvesting while prioritizing transparency and engagement with local communities and regulatory bodies. I emphasizes sustainability, aiming to contribute to global food security and reduce environmental impact. By combining technological innovation, ethical practices, and community involvement, I am at the forefront of shaping the future of agriculture with genetically enhanced crops.With my expertise in biotechnology allows for the cultivation of crops with improved traits such as higher yield, resistance to pests and diseases, and enhanced nutritional content.</p>
+                        <ul class="space-y-3 mb-8">
+                            <h2 class="text-3xl font-bold text-green-900 mb-4">Priorities in Tissue Culture Technology</h2>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700"> Contamination Control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Genetic Fidelity and Consistency</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700"> Cost-Effective and Scalable Protocols</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Production of Disease-Free Planting Material</span>
+                            </li>
+                        </ul>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Request Genetic Engineering Consultation</button>
+                    </div>
+                    <div class="relative">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,h=983,fit=crop,trim=0;84.61538461538461;0;173.84615384615384/AQE4VMVlGyc2oZvJ/463a7641-Yle6lbjQRvC7B5Pe.JPG" alt="Genetic Engineering" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <h3 class="text-xl font-bold mb-2"> Certified Lab</h3>
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Precision Agriculture Consulting -->
+            <div class="tab-content" id="microbial-solutions">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Precision Agriculture Consulting</h3>
+                        <p class="text-lg text-gray-600 mb-6">We also offer a groundbreaking Precision Agriculture Consulting service that utilizes cutting-edge technology and data-driven insights to optimize farming practices. This comprehensive service involves in-depth analyses of soil health, moisture levels, and crop conditions, allowing for personalized recommendations on seed selection, fertilization, irrigation, and pest control. Emphasizing sustainability, My approach aims to improve resource efficiency, reduce environmental impact, and enhance overall farm productivity. The service extends beyond initial consultations, providing ongoing support and monitoring throughout the crop cycle. I also facilitates the integration of smart farming technologies, fostering a collaborative community of informed and empowered farmers. In essence, Precision Agriculture Consulting represents a transformative approach to agriculture, leveraging technology to enable more efficient, sustainable, and resilient farming practices.</p>
+                        <ul class="space-y-3 mb-8">
+                         <h2 class="text-3xl font-bold text-green-900 mb-4">Why Choose Us as Your Precision Agriculture Consultants?</h2>
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Experienced Agronomists & Technologists</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Customized Solutions Based on Your Crop & Climate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700"> Affordable Packages for Small & Large-Scale Farms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Ongoing Support & Seasonal Reviews</span>
+                            </li>
+                        </ul>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Request Genetic Engineering Consultation</button>
+                    </div>
+                    <div class="relative">
+                        <img src="https://mbegunzuribiotechfarms.com/wp-content/uploads/2025/01/APICAL.jpg" alt="Microbial Solutions" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <h3 class="text-xl font-bold mb-2">Boost Your Farm’s Profitability</h3>
+                            <p class="text-sm">In Smart Way</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Educational Workshops and Training -->
+            <div class="tab-content" id="tissue-culture">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Educational Workshops and Training</h3>
+                        <p class="text-lg text-gray-600 mb-6">Above all we offer a transformative Educational Workshops and Training service aimed at empowering farmers, agricultural professionals, and communities with the latest knowledge in biotech agriculture. These engaging workshops, led by experts in biotechnology, agronomy, and environmental science, cover diverse topics from the fundamentals of genetic modification to the practical implementation of precision agriculture. Emphasizing hands-on learning experiences and tailored content, I ensures participants gain insights into sustainable farming practices, ethical considerations, and the environmental impacts of biotech agriculture. Beyond the workshops, I provide ongoing support, offering resources and fostering community engagement, creating a well-informed and skilled network capable of effectively applying biotechnological advancements for sustainable and efficient farming.</p>
+                        <ul class="space-y-3 mb-8">
+                        <h2 class="text-3xl font-bold text-green-900 mb-4">Why Choose Us for Educational Workshops and Training?</h2>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Expert-Led Training by Industry Professionals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Tailored Programs for All Levels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Practical, Hands-On Learning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Localized Content & Case Studies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Ongoing Support After Training</span>
+                            </li>
+                        </ul>
+                         <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Request Genetic Engineering Consultation</button>
+                    </div>
+                    <div class="relative">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1023,fit=crop/AQE4VMVlGyc2oZvJ/53172354689_e6b50a7470_k-A3QPpDzj3jsMjNrp.jpg" alt="Tissue Culture" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <h3 class="text-xl font-bold mb-2">Invest in Knowledge. Empower Your Farm</h3>
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Customized Crop Development -->
+            <div class="tab-content" id="bioinformatics">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Customized Crop Development</h3>
+                        <p class="text-lg text-gray-600 mb-6">Let me introduce Customized Crop Development, a groundbreaking service that utilizes advanced biotechnology to create tailor-made solutions for individual farmers. This service involves a collaborative process where My team works closely with farmers to understand their unique goals and environmental conditions, I use tissue culture technology for mass propagation of potato seedlings, Banana and sweet potatoes. Emphasizing transparency and ethical practices, I ensures compliance with regulations and provide a comprehensive support throughout the cultivation cycle. The service not only maximizes crop performance but also contributes to sustainable agriculture by minimizing the need for excessive pesticides and fertilizers. A Customized Crop Development represents a transformative approach, addressing specific challenges and fostering a more resilient and efficient future for agriculture.</p>
+                        <ul class="space-y-3 mb-8">
+                        <h2 class="text-3xl font-bold text-green-900 mb-4">Why Choose Us for Educational Workshops and Training?</h2>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Integrated Support from Seed to Harvest</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Crop Solutions Based on Scientific Analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Collaborative, Farmer-Centric Approach</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Support for New & Emerging Crops</span>
+                            </li>
+                        </ul>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Request Customized Crop Development Support</button>
+                    </div>
+                    <div class="relative">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1023,fit=crop/AQE4VMVlGyc2oZvJ/generated/generated-AMqxnK55VWhMv03x.png" alt="Bioinformatics" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <h3 class="text-xl font-bold mb-2">Precision Meets Possibility</h3>
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Environmental Impact Assessments -->
+            <div class="tab-content" id="consulting">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Environmental Impact Assessments</h3>
+                        <p class="text-lg text-gray-600 mb-6">We also offer an innovative Environmental Impact Assessment (EIA) service that sets a high standard for sustainable and responsible biotech agriculture. This comprehensive service involves a collaborative effort with farmers, utilizing a team of environmental scientists to assess and mitigate potential ecological impacts associated with the adoption of genetically modified crops. Beyond analysis, EIAs include tailored strategies for minimizing adverse effects, incorporating precision agriculture practices and emphasizing ongoing monitoring and adaptive management. The company prioritizes transparency and community engagement, involving local stakeholders in the assessment process to address concerns and incorporate valuable insights. My commitment to compliance with regulatory standards and ethical considerations ensures that its biotech farming practices align with both local and international guidelines, establishing a new benchmark for environmentally conscious agriculture.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Certified Environmental Experts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Compliance with National and International Standards</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Sustainability-Focused Recommendations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Comprehensive & Timely Reporting</span>
+                            </li>
+                        </ul>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Schedule Consultation</button>
+                    </div>
+                    <div class="relative">
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1023,fit=crop/AQE4VMVlGyc2oZvJ/463a7596-AGB3GWKG78F3EG6M.JPG" alt="Biotech Consulting" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <h3 class="text-xl font-bold mb-2"> Build a Greener Future with Responsible Agriculture</h3>
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Process Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Biotech Development Process</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">A systematic approach to developing innovative agricultural biotechnology solutions.</p>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-800 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Discovery</h3>
+                    <p class="text-gray-600 text-sm">Identify agricultural challenges and potential biotech solutions</p>
+                    <div class="hidden md:block absolute top-10 right-0 transform translate-x-1/2">
+                        <i class="fas fa-chevron-right text-gray-300 text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-800 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Research</h3>
+                    <p class="text-gray-600 text-sm">Lab experiments and proof-of-concept studies</p>
+                    <div class="hidden md:block absolute top-10 right-0 transform translate-x-1/2">
+                        <i class="fas fa-chevron-right text-gray-300 text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-800 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Development</h3>
+                    <p class="text-gray-600 text-sm">Optimize and scale the technology</p>
+                    <div class="hidden md:block absolute top-10 right-0 transform translate-x-1/2">
+                        <i class="fas fa-chevron-right text-gray-300 text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-800 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Testing</h3>
+                    <p class="text-gray-600 text-sm">Field trials and regulatory evaluations</p>
+                    <div class="hidden md:block absolute top-10 right-0 transform translate-x-1/2">
+                        <i class="fas fa-chevron-right text-gray-300 text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="relative">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-800 font-bold text-xl">5</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Commercialization</h3>
+                    <p class="text-gray-600 text-sm">Bring the solution to market</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Studies -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Biotech Success Stories</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Real-world applications of our biotechnology solutions.</p>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Genetic Engineering</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Drought-Resistant Maize Varieties</h3>
+                        <p class="text-gray-600 mb-4">Developed maize varieties that maintain 90% yield under moderate drought conditions, helping farmers in arid regions.</p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">Read Case Study <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Microbial Solutions</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Biofertilizer for Rice Cultivation</h3>
+                        <p class="text-gray-600 mb-4">Our microbial inoculant reduced chemical fertilizer use by 40% while increasing rice yields by 22% in field trials.</p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">Read Case Study <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">View All Case Studies</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="py-16 bg-green-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Agriculture with Biotechnology?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Our team of scientists is ready to collaborate on your next agricultural biotech project.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white hover:bg-gray-100 text-green-800 px-8 py-3 rounded-md text-lg font-medium transition duration-300">Contact Our Biotech Team</button>
+                <button class="bg-transparent hover:bg-green-700 border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Request a Lab Tour</button>
+            </div>
+        </div>
+    </div>
+
+ <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- Logo and Title -->
+                <div class="flex items-center mb-4">
+                    <img src="IMAGE/MBEGUnZURILOGO.jpg" alt="Mbegu Nzuri Logo" class="h-10 w-auto mr-2 rounded">
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Innovating agriculture through biotechnology for a sustainable future.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mbegunzuribiotech?igsh=M3g4ZXV0NjY0aTE3" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                         <li><a href="Blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="Contact Us.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Tissue Culture Technology</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Precision Agriculture Consulting</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Educational Workshops and Training</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Customized Crop Development</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Environmental Impact Assessments</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="text-white-400 not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>AVRDC - The World Vegetable Center, Eastern and Southern Africa, Arusha - Himo Rd, Sing'isi</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-500"></i> +255 656 277 234</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-green-500"></i> info@mbegunzuribiotechfarms.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Mbegunzuri BioTech Farms. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate tech cards on scroll
+        const techCards = document.querySelectorAll('.tech-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        techCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
